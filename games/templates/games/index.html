@@ -1,0 +1,11 @@
+<h1> Genres for Games </h1>
+{% if latest_genres %}
+    <ul>
+        {% for genre in latest_genres %}
+            <li><a href="{% url 'detail' genre.id %}">{{ genre }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+    <h2> There are no genres in the DataBase </h2>
+{% endif %} 

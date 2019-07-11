@@ -1,0 +1,11 @@
+<h1>Genre: {{ genre.title }}</h1>
+
+<h3>Following are the games for this genre. (Total: {{ genre.game_set.count }} games)</h3>
+
+<ul>
+    {% for game in genre.game_set.all %}
+        <!-- <li> {{ game.title }} </li> -->
+        <li><strong>{{ game }}</strong> ({{ game.game_size }} GB) </li>
+        <img src="{{ game.game_logo }}" width="300px" height="300px" /><br><br>
+    {% endfor %}
+</ul>
