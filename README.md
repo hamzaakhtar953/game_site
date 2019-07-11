@@ -1,1 +1,1 @@
-# game_site
+# A django based web application for PC games
