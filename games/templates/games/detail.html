@@ -2,10 +2,21 @@
 
 <h3>Following are the games for this genre. (Total: {{ genre.game_set.count }} games)</h3>
 
-<ul>
+{% if error_message %}
+    <p style="color: red"><strong> {{ error_message }} </strong></p>
+{% endif %}
+
+<form action="{% url 'game:favourite' genre.id %}" method="post">
+    {% csrf_token %}
     {% for game in genre.game_set.all %}
-        <!-- <li> {{ game.title }} </li> -->
-        <li><strong>{{ game }}</strong> ({{ game.game_size }} GB) </li>
-        <img src="{{ game.game_logo }}" width="300px" height="300px" /><br><br>
+        <input type="radio" id="game{{ forloop.counter }}" name="game" value="{{ game.id }}" />
+        <label for="game{{ forloop.counter }}"> 
+            {{ game.title }}
+            {% if game.is_favourite %}
+                <img src="http://tiny.cc/kmlqaz" width="20" height="20"/>
+            {% endif %}
+        </label><br>
     {% endfor %}
-</ul>
+
+    <input type="submit" value="Favourite">
+</form>
