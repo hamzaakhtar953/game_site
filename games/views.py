@@ -25,6 +25,6 @@ def favourite(request, genre_id):
             'error_message': 'Incorrect game selected'
         })
     else:
-        game.is_favourite = True
+        game.is_favorite = True
         game.save()
         return HttpResponseRedirect(reverse('game:detail', args=(genre.id,)))

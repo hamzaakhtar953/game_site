@@ -12,7 +12,7 @@
         <input type="radio" id="game{{ forloop.counter }}" name="game" value="{{ game.id }}" />
         <label for="game{{ forloop.counter }}"> 
             {{ game.title }}
-            {% if game.is_favourite %}
+            {% if game.is_favorite %}
                 <img src="http://tiny.cc/kmlqaz" width="20" height="20"/>
             {% endif %}
         </label><br>

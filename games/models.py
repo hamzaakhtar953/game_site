@@ -15,7 +15,7 @@ class Game(models.Model):
     developer_name = models.CharField(max_length=200)
     game_logo = models.CharField(max_length=1000)
     game_size = models.FloatField(default=0)
-    is_favourite = models.BooleanField(default=False)
+    is_favorite = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.title} created by developer {self.developer_name}'
