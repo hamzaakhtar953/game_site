@@ -2,10 +2,10 @@
 {% if latest_genres %}
     <ul>
         {% for genre in latest_genres %}
-            <li><a href="{% url 'detail' genre.id %}">{{ genre }}</a></li>
+            <li><a href="{% url 'game:detail' genre.id %}">{{ genre }}</a></li>
         {% endfor %}
     </ul>
 
 {% else %}
     <h2> There are no genres in the DataBase </h2>
-{% endif %} 
+{% endif %}
