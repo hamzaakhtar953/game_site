@@ -1,3 +1,6 @@
 # Don't include these folders
 .vscode/
-games/migrations/
+.idea/
+
+# Pycharm files
+__pycache__/

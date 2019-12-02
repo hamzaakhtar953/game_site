@@ -6,9 +6,9 @@ app_name = 'game'
 
 urlpatterns = [
     # ex: /games/
-    path('', views.index, name='index'),
+    path('', views.IndexView.as_view(), name='index'),
     # ex: /games/5/details
-    path('<int:genre_id>/details', views.detail, name='detail'),
-    # ex: /games/5/favourite    
+    path('<int:pk>/details', views.DetailView.as_view(), name='detail'),
+    # ex: /games/5/favourite
     path('<int:genre_id>/favourite', views.favourite, name='favourite'),
 ]

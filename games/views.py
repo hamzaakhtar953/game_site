@@ -1,18 +1,22 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.views import generic
 
 from .models import Genre, Game
 
 
-def index(request):
-    genres = Genre.objects.all()
-    return render(request, 'games/index.html', {'latest_genres': genres})
+class IndexView(generic.ListView):
+    context_object_name = 'latest_genres'
+    template_name = 'games/index.html'
+
+    def get_queryset(self):
+        return Genre.objects.all()
 
 
-def detail(request, genre_id):
-    genre = get_object_or_404(Genre, pk=genre_id)
-    return render(request, 'games/detail.html', {'genre': genre})
+class DetailView(generic.DetailView):
+    model = Genre
+    template_name = 'games/detail.html'
 
 
 def favourite(request, genre_id):
