@@ -1110,6 +1110,12 @@
         <mxCell id="lIo9krQpwGTsLsaVO1FN-23" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;outlineConnect=0;verticalAlign=top;align=center;shape=mxgraph.office.clouds.public_cloud;" vertex="1" parent="lIo9krQpwGTsLsaVO1FN-21">
           <mxGeometry x="1.6964285714285716" y="3.2367857142857024" width="15.60714285714286" height="12.519642857142857" as="geometry" />
         </mxCell>
+        <mxCell id="lIo9krQpwGTsLsaVO1FN-24" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1157" y="1691" as="sourcePoint" />
+            <mxPoint x="-1157" y="1631" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
